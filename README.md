@@ -21,7 +21,7 @@ Now if we download this spreadsheet in the form of an .xlsx file we can start to
 
 ![](./download-xls.png)
 
-We placed that file into this lesson, and you can see it [here](https://github.com/learn-co-curriculum/python-lists-lab), where the contents of this lesson are also located.
+We've already placed that file into this lesson, and you can see it [here](https://github.com/learn-co-curriculum/excel-to-python), where the contents of this lesson are also located.
 
 ### From Local File to Python 
 
@@ -40,7 +40,7 @@ cities[0]
 
 
 
-    {'Area': 59, 'City': 'Solta', 'Country': 'Croatia', 'Population': 1700}
+    {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59}
 
 
 
@@ -121,7 +121,7 @@ travel_df = pandas.read_excel(file_name)
 cities = travel_df.to_dict('records')
 ```
 
-And now that we have data, we can operate on just like a normal list of dictionaries.
+And now that we have data, we can operate on it just like a normal list of dictionaries.
 
 ### Working with the keys and values functions
 
@@ -135,7 +135,7 @@ cities[0]
 
 
 
-    {'Area': 59, 'City': 'Solta', 'Country': 'Croatia', 'Population': 1700}
+    {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59}
 
 
 
@@ -239,6 +239,6 @@ dict(city="Las Vegas", state="Nevada")
 
 ### Summary
 
-In this section we saw how to get our data from the outside world and into Python.  As we become better at Python, the usefulness of taking data and operating on it in code rather than a spreadsheet will become more apparent.  But that doesn't mean we can't get step outside of Python sandbox now.  It's not too difficult to take some data we may already have, and begin to use it with Python.
+In this section we saw how to get our data from the outside world and into Python.  As we become better at Python, the usefulness of taking data and operating on it in code rather than a spreadsheet will become more apparent. We can even begin to try out our new skills with Python and our own data files outside of this lesson.
 
-Afterwards, we saw a few more methods for operating on dictionaries in Python.  Namely, we saw how to use the `keys()` function to retrieve the keys of a dictionary, and the `values()` function to create values.  Finally, we saw how to use the `dict()` constructor to create a new dictionary.
+Next, we saw a few more methods for operating on dictionaries in Python.  Namely, we saw how to use the `keys()` function to retrieve the keys of a dictionary, and the `values()` function to retrieve the dictionary's values.  Finally, we saw how to use the `dict()` constructor to create a new dictionary.
