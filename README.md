@@ -1,5 +1,5 @@
 
-# Going further with dictionaries 
+# Going further with dictionaries
 
 ### Introduction
 
@@ -23,7 +23,7 @@ Now if we download this spreadsheet in the form of an .xlsx file we can start to
 
 We've already placed that file into this lesson, and you can see it [here](https://github.com/learn-co-curriculum/excel-to-python), where the contents of this lesson are also located.
 
-### From Local File to Python 
+### From Local File to Python
 
 Now that we have this file in the folder we are working with, we can get this data into Python code in a few lines.
 
@@ -48,17 +48,17 @@ cities[0]
 
 The code above relies on using an outside library called `pandas`, as it's good at reading excel files.  A library is just a set of reusable functions.  The `pandas` library is available for free online.  We tell our current Jupyter notebook that we are about to use it with the line `import pandas`.  
 
-And that gives us an object, like a dictionary, which has a method on it called `read_excel`.  Similar so how we can call `{'foo': 'bar'}.keys()`.  That's the benefit of a library, we can get methods that do not come out of the box with Python.  So we use the `read_excel` data to read our excel file, by providing the name of the file, `cities.xlsx`, and the preceding `./` just indicates that the file is found in the current folder.  Finally with the line `travel_df.to_dict('records')` we return a list of our dictionaries representing our data.  You can see that when we access the first element of this list, we it returns our first dictionary.  
+And that gives us an object, like a dictionary, which has a method on it called `read_excel`.  Similar so how we can call `{'foo': 'bar'}.keys()`.  That's the benefit of a library, we can get methods that do not come out of the box with Python.  So we use the `read_excel` data to read our excel file, by providing the name of the file, `cities.xlsx`, and the preceding `./` just indicates that the file is found in the current folder.  Finally with the line `travel_df.to_dict('records')` we return a list of our dictionaries representing our data.  You can see that when we access the first element of this list, it returns our first dictionary.  
 
 Here is the code again, with some comments, if you are interested.
 
 
 ```python
-# Here we use a library, which is some code not part of standard Python, to this process easier 
+# Here we use a library, which is some code not part of standard Python, to make this process easier
 import pandas
-# If we use the `import pandas` we have access to the pandas library 
+# If we use the `import pandas` we have access to the pandas library
 travel_df = pandas.read_excel('./cities.xlsx')
-# We call the pandas.read_excel method and pass through the string './cities.xlsx' as the file is called cities.xlsx.  By saying './' we are saying 
+# We call the pandas.read_excel method and pass through the string './cities.xlsx' as the file is called cities.xlsx.  By saying './' we are saying
 # go to the current folder, lists-lab, and find the 'cities.xlsx' file there
 cities = travel_df.to_dict('records')
 ```
@@ -199,7 +199,7 @@ Once again, we call the method, and then coerce it into a list, by using the `li
 
 ### Creating Dictionaries
 
-So far, we have seen one way of creating dictionaries: 
+So far, we have seen one way of creating dictionaries:
 
 
 ```python
