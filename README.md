@@ -48,7 +48,7 @@ cities[0]
 
 The code above relies on using an outside library called `pandas`, as it's good at reading excel files.  A library is just a set of reusable functions.  The `pandas` library is available for free online.  We tell our current Jupyter notebook that we are about to use it with the line `import pandas`.  
 
-And that gives us an object, like a dictionary, which has a method on it called `read_excel`.  Similar so how we can call `{'foo': 'bar'}.keys()`.  That's the benefit of a library, we can get methods that do not come out of the box with Python.  So we use the `read_excel` data to read our excel file, by providing the name of the file, `cities.xlsx`, and the preceding `./` just indicates that the file is found in the current folder.  Finally with the line `travel_df.to_dict('records')` we return a list of our dictionaries representing our data.  You can see that when we access the first element of this list, it returns our first dictionary.  
+And that gives us an object, like a dictionary, which has a method on it called `read_excel`.  Similar to how we can call `{'foo': 'bar'}.keys()`.  That's the benefit of a library, we can get methods that do not come out of the box with Python.  So we use the `read_excel` data to read our excel file, by providing the name of the file, `cities.xlsx`, and the preceding `./` just indicates that the file is found in the current folder.  Finally with the line `travel_df.to_dict('records')` we return a list of our dictionaries representing our data.  You can see that when we access the first element of this list, it returns our first dictionary.  
 
 Here is the code again, with some comments, if you are interested.
 
