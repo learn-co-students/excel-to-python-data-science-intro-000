@@ -7,6 +7,8 @@ Now that we know a little bit about lists and dictionaries, we can take data in 
 
 ### Objectives
 
+You will be able to:
+
 * Understand how the list data structure aligns with data in non-programming contexts
 * Understand how the dictionary data structure aligns with data in non-programming contexts
 * See some of the steps involved in getting data from a different format and into code
