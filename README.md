@@ -1,13 +1,11 @@
 
-# Going further with dictionaries
+# Going further with dictionaries 
 
 ### Introduction
 
 Now that we know a little bit about lists and dictionaries, we can take data in a different digital format, and move it into code.  In this lesson, we'll see that in just a few lines of code, we can use Python to work with data in other formats.  Then we'll learn a couple of other methods for working with dictionaries: `keys()`, `values()`, and the `dict()` constructor.
 
 ### Objectives
-
-You will be able to:
 
 * Understand how the list data structure aligns with data in non-programming contexts
 * Understand how the dictionary data structure aligns with data in non-programming contexts
@@ -25,7 +23,7 @@ Now if we download this spreadsheet in the form of an .xlsx file we can start to
 
 We've already placed that file into this lesson, and you can see it [here](https://github.com/learn-co-curriculum/excel-to-python), where the contents of this lesson are also located.
 
-### From Local File to Python
+### From Local File to Python 
 
 Now that we have this file in the folder we are working with, we can get this data into Python code in a few lines.
 
@@ -56,11 +54,11 @@ Here is the code again, with some comments, if you are interested.
 
 
 ```python
-# Here we use a library, which is some code not part of standard Python, to make this process easier
+# Here we use a library, which is some code not part of standard Python, to make this process easier 
 import pandas
-# If we use the `import pandas` we have access to the pandas library
+# If we use the `import pandas` we have access to the pandas library 
 travel_df = pandas.read_excel('./cities.xlsx')
-# We call the pandas.read_excel method and pass through the string './cities.xlsx' as the file is called cities.xlsx.  By saying './' we are saying
+# We call the pandas.read_excel method and pass through the string './cities.xlsx' as the file is called cities.xlsx.  By saying './' we are saying 
 # go to the current folder, lists-lab, and find the 'cities.xlsx' file there
 cities = travel_df.to_dict('records')
 ```
@@ -201,7 +199,7 @@ Once again, we call the method, and then coerce it into a list, by using the `li
 
 ### Creating Dictionaries
 
-So far, we have seen one way of creating dictionaries:
+So far, we have seen one way of creating dictionaries: 
 
 
 ```python
