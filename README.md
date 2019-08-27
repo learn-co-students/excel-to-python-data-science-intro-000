@@ -15,11 +15,11 @@ Now that we know a little bit about lists and dictionaries, we can take data in 
 
 For example, here is [our list of travel cities and countries](https://docs.google.com/spreadsheets/d/1kv8z2lZ3NLWbJcdE6ysd40BZLresdl5W6mWrtIunMn4/edit?usp=sharing) in the form of a google sheet.  If you click on the link, you will see our spreadsheet.
 
-<img src="./countries-cities.png" align="left" width="500">
+<img src="./countries-cities.png" width="500">
 
 Now if we download this spreadsheet in the form of an .xlsx file we can start to work with it.
 
-<img src="./download-xls.png" align="left" width="600">
+<img src="./download-xls.png" width="600">
 
 We've already placed that file into this lesson, and you can see it [here](https://github.com/learn-co-curriculum/excel-to-python), where the contents of this lesson are also located.
 
@@ -109,7 +109,7 @@ cities
 
 Look at that. Our variable `cities` is full of cities from our spreadsheet.
 
-<img src="./countries-cities.png" align="left" width="500">
+<img src="./countries-cities.png" width="500">
 
 And we got there in four lines of code.
 
