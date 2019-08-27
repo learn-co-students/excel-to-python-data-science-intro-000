@@ -13,13 +13,13 @@ Now that we know a little bit about lists and dictionaries, we can take data in 
 
 ### From Google Sheet to Local File
 
-For example, here is [our list of travel cities and countries](https://docs.google.com/spreadsheets/d/1BTJMMFH9t4p5UmHj5kiC6PGfMN6yaaaZkocx0mDqTK0/edit?usp=drive_web&ouid=111878893823071965889) in the form of a google document.  If you click on the link, you will see our spreadsheet.
+For example, here is [our list of travel cities and countries](https://docs.google.com/spreadsheets/d/1kv8z2lZ3NLWbJcdE6ysd40BZLresdl5W6mWrtIunMn4/edit?usp=sharing) in the form of a google sheet.  If you click on the link, you will see our spreadsheet.
 
-![](./countries-cities.png)
+<img src="./countries-cities.png" align="left" width="500">
 
 Now if we download this spreadsheet in the form of an .xlsx file we can start to work with it.
 
-![](./download-xls.png)
+<img src="./download-xls.png" align="left" width="600">
 
 We've already placed that file into this lesson, and you can see it [here](https://github.com/learn-co-curriculum/excel-to-python), where the contents of this lesson are also located.
 
@@ -27,7 +27,7 @@ We've already placed that file into this lesson, and you can see it [here](https
 
 Now that we have this file in the folder we are working with, we can get this data into Python code in a few lines.
 
-> ** Deep breath, soft eyes**: In the gray box below are four lines of code. They go over some topics we did not cover yet.  So don't worry, if you don't follow everything right now.  By the end of this unit, you will understand all of the code.  For right now, it's fine to just have a slight sense of what's going on.  
+> **Deep breath, soft eyes**: In the gray box below are four lines of code. They go over some topics we did not cover yet.  So don't worry, if you don't follow everything right now.  By the end of this unit, you will understand all of the code.  For right now, it's fine to just have a slight sense of what's going on.  
 
 
 ```python
@@ -40,7 +40,10 @@ cities[0]
 
 
 
-    {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59}
+    {'City': 'Buenos Aires',
+     'Country': 'Argentina',
+     'Population': 2891082,
+     'Area': 203}
 
 
 
@@ -48,7 +51,7 @@ cities[0]
 
 The code above relies on using an outside library called `pandas`, as it's good at reading excel files.  A library is just a set of reusable functions.  The `pandas` library is available for free online.  We tell our current Jupyter notebook that we are about to use it with the line `import pandas`.  
 
-And that gives us an object, like a dictionary, which has a method on it called `read_excel`.  Similar to how we can call `{'foo': 'bar'}.keys()`.  That's the benefit of a library, we can get methods that do not come out of the box with Python.  So we use the `read_excel` data to read our excel file, by providing the name of the file, `cities.xlsx`, and the preceding `./` just indicates that the file is found in the current folder.  Finally with the line `travel_df.to_dict('records')` we return a list of our dictionaries representing our data.  You can see that when we access the first element of this list, it returns our first dictionary.  
+And that gives us an object, like a dictionary, which has a method in it called `read_excel`.  Similar to how we can call `{'foo': 'bar'}.keys()`.  That's the benefit of a library, we can get methods that do not come out of the box with Python.  So we use the `read_excel` data to read our excel file, by providing the name of the file, `cities.xlsx`, and the preceding `./` just indicates that the file is found in the current folder.  Finally with the line `travel_df.to_dict('records')` we return a list of our dictionaries representing our data.  You can see that when we access the first element of this list, it returns our first dictionary.  
 
 Here is the code again, with some comments, if you are interested.
 
@@ -59,7 +62,7 @@ import pandas
 # If we use the `import pandas` we have access to the pandas library 
 travel_df = pandas.read_excel('./cities.xlsx')
 # We call the pandas.read_excel method and pass through the string './cities.xlsx' as the file is called cities.xlsx.  By saying './' we are saying 
-# go to the current folder, lists-lab, and find the 'cities.xlsx' file there
+# go to the current folder, excel-to-python, and find the 'cities.xlsx' file there
 cities = travel_df.to_dict('records')
 ```
 
@@ -71,45 +74,42 @@ cities
 
 
 
-    [{'Area': 59, 'City': 'Solta', 'Country': 'Croatia', 'Population': 1700},
-     {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554},
-     {'Area': 4758,
-      'City': 'Buenos Aires',
+    [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 13591863},
-     {'Area': 3750,
-      'City': 'Los Cabos',
-      'Country': 'Mexico',
-      'Population': 287651},
-     {'Area': 33,
-      'City': 'Walla Walla Valley',
-      'Country': 'USA',
-      'Population': 32237},
-     {'Area': 200, 'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850},
-     {'Area': 491,
-      'City': 'Albuquerque',
-      'Country': 'New Mexico',
-      'Population': 559277},
-     {'Area': 8300,
-      'City': 'Archipelago Sea',
-      'Country': 'Finland',
-      'Population': 60000},
-     {'Area': 672,
-      'City': 'Iguazu Falls',
-      'Country': 'Argentina',
-      'Population': 0},
-     {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000},
-     {'Area': 2731571, 'City': 'Toronto', 'Country': 'Canada', 'Population': 630},
-     {'Area': 3194,
-      'City': 'Pyeongchang',
+      'Population': 2891082,
+      'Area': 203},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
+     {'City': 'Pyeongchang',
       'Country': 'South Korea',
-      'Population': 2581000}]
+      'Population': 43666,
+      'Area': 1464},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
+     {'City': 'Los Cabos',
+      'Country': 'Mexico',
+      'Population': 287671,
+      'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
+     {'City': 'Archipelago Sea',
+      'Country': 'Finland',
+      'Population': 60000,
+      'Area': 2000},
+     {'City': 'Walla Walla Valley',
+      'Country': 'USA',
+      'Population': 32986,
+      'Area': 35},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
+     {'City': 'Iguazu Falls',
+      'Country': 'Argentina',
+      'Population': 0,
+      'Area': 2396}]
 
 
 
 Look at that. Our variable `cities` is full of cities from our spreadsheet.
 
-![](./countries-cities.png)
+<img src="./countries-cities.png" align="left" width="500">
 
 And we got there in four lines of code.
 
@@ -135,7 +135,10 @@ cities[0]
 
 
 
-    {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59}
+    {'City': 'Buenos Aires',
+     'Country': 'Argentina',
+     'Population': 2891082,
+     'Area': 203}
 
 
 
@@ -179,7 +182,7 @@ cities[0].values()
 
 
 
-    dict_values(['Solta', 'Croatia', 1700, 59])
+    dict_values(['Buenos Aires', 'Argentina', 2891082, 203])
 
 
 
@@ -191,7 +194,7 @@ list(cities[0].values())
 
 
 
-    ['Solta', 'Croatia', 1700, 59]
+    ['Buenos Aires', 'Argentina', 2891082, 203]
 
 
 
